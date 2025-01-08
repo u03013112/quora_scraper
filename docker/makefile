@@ -1,8 +1,11 @@
 TAG=v1
 ACCOUNT=u03013112
-IMAGE=${ACCOUNT}/quora_scraper:${TAG}
+IMAGE=${ACCOUNT}/seleniumbase:${TAG}
 
-all:
-	docker build -t ${IMAGE} .
+all: build
+
+build:
+	cd ../SeleniumBase && docker build -t ${IMAGE} .
+
 push:
-	docker push ${IMAGE} 
+	docker push ${IMAGE}

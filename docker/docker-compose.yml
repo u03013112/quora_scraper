@@ -1,11 +1,9 @@
 version: '3.8'
 
 services:
-  quora_scraper:
-    build: .
+  seleniumbase:
+    image: u03013112/seleniumbase:v1
     volumes:
-      - .:/app
-    environment:
-      - PYTHONUNBUFFERED=1
+      - ../:/app
     command: /bin/bash
     tty: true
